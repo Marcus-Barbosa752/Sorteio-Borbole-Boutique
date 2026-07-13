@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: linear-gradient(to bottom, #f8d76a, #fdf5b9);
+    height: 100vh;
+    overflow: hidden;
+}
+header {
+    padding: 10px 20px;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 60px auto;
+    place-items: center;
+}
+header img {
+    width: 60px;
+}
+header ul {
+    position: relative;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    border-radius: 20px;
+    padding: 20px;
+}
+header ul li {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+header ul li.LiNavActive,
+header ul li:hover {
+    color: white;
+}
+header ul .IndicatorSession {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    height: 90%;
+    width: 164px;
+    background: black;
+    border-radius: inherit;
+    z-index: -1;
+}
+main {
+    width: 100vw;
+    height: calc(100vh - 83px);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 20px;
+}
+main .ImgLink {
+    height: 100%; 
+    width: 460px; 
+    position: relative;
+}
+main img {
+    width: 500px;
+    height: 100%;
+    border-radius: 20px;
+}
+main section.Participantes_Home {
+    width: calc(100% - 500px);
+}
+main section.Participantes_Home header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main section.Participantes_Home header input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    background: none;
+    outline: none;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+main section.Participantes_Home header input::placeholder {
+    color: black;
+}
+main section.Participantes_Home header input:focus {
+    border: solid black 1px;
+}
+main section.Participantes_Home header nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main section.Participantes_Home header nav button {
+    padding: 10px;
+    border: none;
+    background: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+main section.Participantes_Home header nav button:hover {
+    box-shadow: 0 0 10px rgba(66, 66, 66, 0.656);
+}
+main section.Participantes_Home section.TabelaParticipantesHome {
+    width: 100%;
+    height: calc(100% - 41px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+main section.Participantes_Home section.TabelaParticipantesHome::-webkit-scrollbar {
+    width: 0;
+}
+main section.Participantes_Home section.TabelaParticipantesHome ul {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 35% auto;
+}
+main section.Participantes_Home section.TabelaParticipantesHome ul li {
+    font-size: 20px;
+    font-weight: bold;
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home h4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    font-weight: normal;
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home .CardUsuario {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home .CardUsuario h4 span {
+    width: 50%;
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home .CardUsuario nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home .CardUsuario nav button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home .CardUsuario nav button:nth-child(1) {
+    background: rgb(0, 255, 47);
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home .CardUsuario nav button:nth-child(2) {
+    background: rgb(255, 0, 0);
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home .CardUsuario nav button:nth-child(1):hover {
+    background: rgb(0, 151, 28);
+}
+main section.Participantes_Home section.TabelaParticipantesHome .Content_Home .CardUsuario nav button:nth-child(2):hover {
+    background: rgb(158, 0, 0);
+}
+section.RandomicoParticipantes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #f8d76ab2, #fdf5b9bb);
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+    display: none;
+}
+section.RandomicoParticipantes header {
+    padding: 0;
+}
+section.RandomicoParticipantes header button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+section.RandomicoParticipantes header button:hover {
+    background: none;
+    box-shadow: 0 0 10px rgba(66, 66, 66, 0.656);
+    color: black;
+}
+section.RandomicoParticipantes header button i {
+    font-size: 20px;
+}
+section.RandomicoParticipantes .ExibirParticipantes {
+    width: 100%;
+    height: calc(100% - 26px);
+    display: grid;
+    place-content: center;
+    place-items: center;
+    font-weight: bold;
+    font-size: 100px;
+}
