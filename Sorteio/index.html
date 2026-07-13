@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borbole_Boutique - Sorteio</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="icon" href="Assets/Icon/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="Assets/Style/index.css">
+    <link rel="stylesheet" href="Assets/Style/Responsividade.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="Assets/Image/Logo_Borbole_Boutique.png" width="30" alt="Imagem de uma borboleta">
+        <!--
+        <ul>
+            <li class="LiNavActive">Pagina inicial</li>
+            <li>Particpantes</li>
+            <div class="IndicatorSession"></div>
+        </ul>
+        -->
+    </header>
+
+    <main>
+        <!-- Post -->
+        <div class="ImgLink">
+            <img src="Assets/Image/Post_Sorteio.jpeg" style="width: 100%;" alt="Imagem do sorteio">
+            <iframe src="https://www.instagram.com/reel/DanzZYCo09z/" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; width: 100%; border: none; border-radius: 20px;"></iframe>
+            <!--
+            <iframe src="https://www.instagram.com/reel/DanzZYCo09z/" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; width: 100%; border: none; border-radius: 20px;"></iframe>
+            -->
+        </div>
+
+        <!-- Participantes -->
+        <section class="Participantes_Home">
+            <header>
+                <input type="text" id="InputNovoParticipantesHome" placeholder="Marcus_Barbosa">
+                <nav>
+                    <button id="BtnAdicionar">Adicionar</button>
+                    <button id="BtnSorteiar">Sorteiar</button>
+                </nav>
+            </header>
+
+            <section class="TabelaParticipantesHome">
+                <ul>
+                    <li>#</li>
+                    <li>Nome</li>
+                </ul>
+
+                <div class="Content_Home" id="InserirParticipantes">
+                    <!-- 
+                    <div class="CardUsuario">
+                        <h4>$Quantidade <span>Nome</span></h4>
+                        <nav>
+                            <button data-acao="editar" data-index="${Index}"><i class="fi fi-sr-user-pen"></i> <span>Editar</span></button>
+                            <button data-acao="deletar" data-index="${Index}"><i class="fi fi-sr-cross"></i> <span>Deletar</span></button>
+                        </nav>
+                    </div>
+                    -->
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <section class="RandomicoParticipantes">
+        <header>
+            <button id="BtnFecharSorteiar"><i class="fi fi-sr-caret-left"></i> Fechar</button>
+        </header>
+
+        <div class="ExibirParticipantes"></div>
+    </section>
+
+    <script src="Assets/Script/index.js"></script>
+</body>
+
+</html>
